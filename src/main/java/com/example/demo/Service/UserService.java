@@ -8,6 +8,12 @@ public interface UserService {
 
     int addUser(User user);
 
+    User findUserById(Integer Id);
+
     List<User> getAllUsers();
+
+    int updateUser(User user);
+
+    int deleteUserById(Integer Id);
 
 }

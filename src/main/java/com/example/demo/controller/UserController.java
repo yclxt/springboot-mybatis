@@ -31,8 +31,19 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-//    @RequestMapping(value = "/index")
-//    public String index(){
-//        return "hello spring boot！！！";
-//    }
+    @ResponseBody
+    @RequestMapping(value = "/update")
+    public int updateUser(User user){
+        return userService.updateUser(user);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/")
+    public User getOneUser(Integer Id){
+        return userService.findUserById(Id);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/delete")
+    public int deleteUser(Integer Id){
+        return userService.deleteUserById(Id);
+    }
 }

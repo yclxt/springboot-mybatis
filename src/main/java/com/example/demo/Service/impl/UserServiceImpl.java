@@ -21,7 +21,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findUserById(Integer Id) {
+        return userMapper.selectByPrimaryKey(Id);
+    }
+
+    @Override
     public List<User> getAllUsers() {
         return userMapper.selectAllUsers();
+    }
+
+    @Override
+    public int updateUser(User user) {
+        return userMapper.updateByPrimaryKey(user);
+    }
+
+    @Override
+    public int deleteUserById(Integer Id) {
+        return userMapper.deleteByPrimaryKey(Id);
     }
 }
