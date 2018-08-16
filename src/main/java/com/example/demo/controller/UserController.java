@@ -28,6 +28,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/all", produces = {"application/json;charset=UTF-8"})
     public List<User> getAllUsers(){
+        System.out.println("test hot");
         return userService.getAllUsers();
     }
 
